@@ -1,2 +1,2 @@
 timezone: America/Mexico_City
-permalink: "/:title"
+permalink: "/blog/:title"
