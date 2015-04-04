@@ -1,0 +1,31 @@
+{% include header.html %}
+  <div class="app-brief blog">
+    <div class="container">
+      <div class="col-md-8 col-md-push-2 left-align">
+        <div class="post fadeInLeft animated">
+          <h1 class="post-title">{{ page.title }}</h1>
+          <div class="post-content">
+            {{content}}
+          </div>
+
+          <div class="meta">
+            <div class="author clearfix">
+              <a href="{{ site.data.members[page.author].url }}" class="author-avatar pull-left">
+                {% if site.data.members[page.author].avatar %}
+                  <img src="{{ site.data.members[page.author].avatar }}" class="img-circle" alt="">
+                {% endif %}
+              </a>
+              {{site.data.members.members}}
+              <div class="author-info">
+                <div class="author-name"><strong>{{ site.data.members[page.author].name }}</strong></div>
+                <div class="author-description text-muted">{{ site.data.members[page.author].description }}</div>
+                <a href="{{ site.data.members[page.author].url }}">{{ site.data.members[page.author].url }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% include footer.html %}
